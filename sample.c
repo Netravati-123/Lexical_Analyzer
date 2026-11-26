@@ -22,9 +22,7 @@ int main()
         printf("%s", str);
     }
 
-    int 2abc;
-
-    @
+    int @2abc;
 
     return 0;
 }

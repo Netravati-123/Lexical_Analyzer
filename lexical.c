@@ -134,20 +134,20 @@ void lexical_analyzer(FILE *fp)
         }
 
         /* Comments */
-        /*else if(ch == '/')
+        else if(ch == '/')
         {
             next = fgetc(fp);
 
             /* Single-line comment */
-            /*if(next == '/')
+            if(next == '/')
             {
                 while((ch = fgetc(fp)) != EOF && ch != '\n')
                 {
                 }
-            }*/
+            }
 
             /* Multi-line comment */
-           /* else if(next == '*')
+            else if(next == '*')
             {
                 int previous = 0;
                 int found = 0;
@@ -173,7 +173,7 @@ void lexical_analyzer(FILE *fp)
 
                 print_operator(fp, '/');
             }
-        }*/
+        }
 
         /* Identifiers and keywords */
         else if(isalpha((unsigned char)ch) || ch == '_')
@@ -243,7 +243,7 @@ void lexical_analyzer(FILE *fp)
         }
 
         /* Character constants */
-        /*else if(ch == '\'')
+        else if(ch == '\'')
         {
             char literal[200];
             int length = 0;
@@ -297,10 +297,10 @@ void lexical_analyzer(FILE *fp)
                 printf("%s -> CHARACTER CONSTANT\n", literal);
             else
                 printf("%s -> INVALID CHARACTER CONSTANT\n", literal);
-        }*/
+        }
 
         /* String constants */
-        /*else if(ch == '"')
+        else if(ch == '"')
         {
             char literal[200];
             int length = 0;
@@ -339,7 +339,7 @@ void lexical_analyzer(FILE *fp)
                 printf("%s -> STRING CONSTANT\n", literal);
             else
                 printf("%s -> INVALID STRING CONSTANT\n", literal);
-        }*/
+        }
 
         /* Operators */
         else if(is_operator(ch))
